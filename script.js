@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.style.height = '100%';
         canvas.style.pointerEvents = 'none';
         canvas.style.zIndex = '-1';
-        canvas.style.opacity = '0.1';
+        canvas.style.opacity = '0.15';
         
         document.body.appendChild(canvas);
         
@@ -131,11 +131,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const drops = [];
         for (let x = 0; x < columns; x++) {
-            drops[x] = 1;
+            drops[x] = Math.random() * -100;
         }
         
         function draw() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             
             ctx.fillStyle = '#00ff41';
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
                     drops[i] = 0;
                 }
-                drops[i]++;
+                drops[i] += 0.5 + Math.random() * 0.5;
             }
         }
         
