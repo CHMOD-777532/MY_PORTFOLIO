@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        window.history.scrollRestoration = 'manual';
+    }, 0);
+    
     const typedTextElement = document.getElementById('typed-text');
     const terminalInput = document.getElementById('terminal-input');
     const terminalOutput = document.getElementById('terminal-output');
