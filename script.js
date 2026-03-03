@@ -17,12 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function calculateExperience() {
-        const printronixStart = new Date('2021-01-01');
-        const sipradiStart = new Date('2024-01-01');
-        const today = new Date();
-        
-        const printronixYears = Math.floor((sipradiStart - printronixStart) / (365.25 * 24 * 60 * 60 * 1000));
-        const sipradiYears = Math.floor((today - sipradiStart) / (365.25 * 24 * 60 * 60 * 1000));
+        const printronixYears = 4;
+        const sipradiYears = 1.5;
         
         return printronixYears + sipradiYears;
     }
@@ -190,8 +186,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'date': new Date().toString(),
             'matrix': 'Entering the matrix... 🌐',
             'age': `Current age: ${calculateAge()} years (Born: June 8, 2000)`,
-            'experience': `Total experience: ${calculateExperience()} years\n• Printronix Computing Solution: 3 years (IT Department)\n• Sipradi Trading: ${calculateExperience() - 3} years (Current)`,
-            'work': 'Work History:\n• Printronix Computing Solution (3 years)\n  - Role: IT Department\n  - Period: 2021 - 2024\n• Sipradi Trading (Current)\n  - Role: IT Security\n  - Period: 2024 - Present',
+            'experience': `Total experience: ${calculateExperience()} years\n• Printronix Computing Solution: 4 years (IT Department)\n• Sipradi Trading Pvt. Ltd.: 1.5 years (Current - IT Department)`,
+            'work': 'Work History:\n• Printronix Computing Solution (4 years)\n  - Role: IT Department\n  - Period: 2020 - 2024\n• Sipradi Trading Pvt. Ltd. (Current)\n  - Role: IT Department\n  - Period: 2024 - Present (1.5 years)',
             'phone': 'Phone: +9765818890\nClick to call: tel:9765818890',
             'email': 'Email: agraharisahil3@gmail.com\nClick to mail: mailto:agraharisahil3@gmail.com',
             'hack': 'Access Denied. This is an ethical hacking portfolio. 🔒',
